@@ -11,6 +11,7 @@ public class TokiPonaTasoValidator {
 
 	/**
 	 * Validates a string against a toki pona taso regex.
+	 *
 	 * @param content The string to validate.
 	 * @return True if the string passed the regex.
 	 */

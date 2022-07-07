@@ -2,8 +2,6 @@ package cafe.ferret.ilo_ma;
 
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
-import org.quiltmc.qsl.base.api.entrypoint.server.DedicatedServerModInitializer;
-import org.quiltmc.qsl.lifecycle.api.event.ServerLifecycleEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
