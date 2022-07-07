@@ -1,0 +1,41 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "cafe.ferret",
+		"id": "ilo_ma",
+		"version": "${version}",
+		"metadata": {
+			"name": "ilo ma",
+			"description": "ilo pi musi Manka",
+			"contributors": {
+				"mazziechai": "creator",
+				"l4ssc": "creator"
+			},
+			"contact": {
+				"homepage": "https://github.com/mazziechai/ilo-ma",
+				"issues": "https://github.com/mazziechai/ilo-ma/issues",
+				"sources": "https://github.com/mazziechai/ilo-ma"
+			},
+			"icon": "assets/ilo_ma/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "cafe.ferret.ilo_ma.IloMa"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.17.1-"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=2.0.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.19"
+			}
+		]
+	},
+	"mixin": "ilo_ma.mixins.json"
+}
