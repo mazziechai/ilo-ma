@@ -14,7 +14,5 @@ public class IloMa implements ModInitializer {
 	@Override
 	public void onInitialize(ModContainer mod) {
 		LOGGER.info("toki, ma o!");
-
-
 	}
 }
