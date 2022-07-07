@@ -20,11 +20,12 @@ import org.spongepowered.asm.mixin.injection.Redirect;
  *   JUST how it displays on the name tag (Styled Nicknames handles the player list and chat well enough)
  */
 
+@SuppressWarnings("unchecked")
 @Mixin(EntityRenderer.class)
 public class EntityRendererMixin<T extends Entity> {
 	@Redirect(method = "render",
-	          at     = @At(value  = "INVOKE",
-			               target = "Lnet/minecraft/client/renderer/entity/EntityRenderer;renderNameTag(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/network/chat/Component;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V"))
+			at     = @At(value  = "INVOKE",
+					target = "Lnet/minecraft/client/renderer/entity/EntityRenderer;renderNameTag(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/network/chat/Component;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V"))
 	public void onNameTagRender(EntityRenderer<T> instance, T entity, Component text, PoseStack matrices, MultiBufferSource vertexConsumers, int light) {
 		if (entity instanceof Player) {
 			((EntityRendererInvoker<T>) instance).invokeRenderNameTag(entity, Component.literal("jan 123").withStyle(ChatFormatting.YELLOW), matrices, vertexConsumers, light);
