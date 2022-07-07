@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 
 public class TokiPonaTasoValidator {
 	private static final Pattern PATTERN = Pattern.compile("^(?:[k-nps]?[aeiou]|[jt][aeou]|w[aei])(?:(?:n?[klps]|[mn])[aeiou]|n?[jt][aeou]|n?w[aei])*n?$", Pattern.CASE_INSENSITIVE);
+	private static final Pattern EXEMPTIONS = Pattern.compile("^(a*|n*|u*)$");
 
 	/**
 	 * Validates a string against a toki pona taso regex.
@@ -30,9 +31,12 @@ public class TokiPonaTasoValidator {
 		// Check each word with the pattern
 		for (String word : alphabeticWords) {
 			Matcher matcher = PATTERN.matcher(word);
+			Matcher exemptions = EXEMPTIONS.matcher(word);
 
 			if (!matcher.find()) {
-				return false;
+				if (!exemptions.find()) {
+					return false;
+				}
 			}
 		}
 
