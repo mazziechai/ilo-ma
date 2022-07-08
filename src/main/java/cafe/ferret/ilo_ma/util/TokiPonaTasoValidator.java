@@ -1,4 +1,4 @@
-package cafe.ferret.ilo_ma.tpt;
+package cafe.ferret.ilo_ma.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;

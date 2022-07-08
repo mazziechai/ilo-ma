@@ -1,15 +1,15 @@
 package cafe.ferret.ilo_ma.mixin;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.entity.EntityRenderer;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.Entity;
+import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;
 
 @Mixin(EntityRenderer.class)
 public interface EntityRendererInvoker<T extends Entity> {
-	@Invoker("renderNameTag")
-	void invokeRenderNameTag(T entity, Component text, PoseStack matrices, MultiBufferSource vertexConsumers, int light);
+	@Invoker("renderLabelIfPresent")
+	void invokeRenderNameTag(T entity, Text text, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light);
 }
