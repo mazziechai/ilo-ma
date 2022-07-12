@@ -34,10 +34,6 @@
 			{
 				"id": "minecraft",
 				"versions": ">=1.19"
-			},
-			{
-				"id": "styled-nicknames",
-				"versions": ">=1.1.1"
 			}
 		]
 	},

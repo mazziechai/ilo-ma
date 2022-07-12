@@ -8,8 +8,6 @@ yarn_mappings = "1.19+build.4"
 
 quilted_fabric_api = "2.0.0-beta.4+0.57.0-1.19"
 
-playerdata = "0.2.1+1.19"
-
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 quilt_mappings = { module = "org.quiltmc:quilt-mappings", version.ref = "quilt_mappings" }
@@ -19,8 +17,6 @@ yarn_mappings = { module = "net.fabricmc:yarn", version.ref = "yarn_mappings" }
 
 quilted_fabric_api = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api", version.ref = "quilted_fabric_api" }
 quilted_fabric_api_deprecated = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api-deprecated", version.ref = "quilted_fabric_api" }
-
-playerdata = { module = "eu.pb4:player-data-api", version.ref = "playerdata" }
 
 # If you have multiple similar dependencies, you can declare a dependency bundle and reference it on the build script with "libs.bundles.example".
 [bundles]

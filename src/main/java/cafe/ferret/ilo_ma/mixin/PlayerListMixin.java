@@ -16,9 +16,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(PlayerManager.class)
 public abstract class PlayerListMixin {
-	/**
-	 *
-	 */
 	@Inject(method = "broadcast(Lnet/minecraft/server/filter/FilteredMessage;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/util/registry/RegistryKey;)V", at = @At("HEAD"), cancellable = true)
 	public void onBroadcastChatMessage(FilteredMessage<SignedMessage> filteredMessage, ServerPlayerEntity serverPlayerEntity, RegistryKey<MessageType> registryKey, CallbackInfo ci) {
 		String content = filteredMessage.raw().getContent().getString();

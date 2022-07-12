@@ -4,13 +4,9 @@
   "package": "cafe.ferret.ilo_ma.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "EntityRendererMixin",
     "PlayerListMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-  },
-  "client": [
-    "EntityRendererInvoker"
-  ]
+  }
 }
